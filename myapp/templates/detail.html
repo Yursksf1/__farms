@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ farm.name }}</title>
+</head>
+<body>
+    <h2>Detalle de la finca y riezgos</h2>
+    <p><strong>Numero interno finca: </strong> {{ farm.name }} </p>
+    <p><strong>Área finca: </strong> {{ farm.area }} </p>
+    <p><strong>Geometria análisis deforestación: </strong> {{ farm.geometria }} </p>
+    <p><strong>Total lotes finca: </strong> {{ farm.total_lotes_finca }} </p>
+    <p><strong>Finca con riesgo deforestación: </strong> {{ farm.is_riesgo_deforestacion }} </p>
+    <p><strong>Total lotes con riesgo de deforestación: </strong> {{ farm.total_riesgo_deforestacion }} </p>
+    <p><strong>Lotes con deforestación: </strong> {{ farm.riesgo_deforestacion }} </p>
+    <p><strong>Total puntos a verificar por finca: </strong> {{ farm.total_puntos_verificar }} </p>
+    <p><strong>Ánalisis de la deforestación por parte del analista SIG: </strong> {{ farm.analisis }} </p>
+    <p><strong>Fase del protocolo de la no deoforestación: </strong> {{ farm.fase_deforestacion }} </p>
+    <p><strong>Tecnico a cargo: </strong> {{ farm.tecnico }} </p>
+
+
+
+</body>
+</html>

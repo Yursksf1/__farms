@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Fincas</title>
+</head>
+<body>
+    <h2>Lista de Fincas</h2>
+
+    <!-- Formulario de búsqueda -->
+    <form method="GET" action="{% url 'lista_productos' %}">
+        <input type="text" name="q" placeholder="Buscar fincas..." value="{{ query }}">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <!-- Lista de productos -->
+    {% if fincas %}
+        <ul>
+            {% for finca in fincas %}
+                <li>
+                    <a href="{% url 'detalle_producto' finca.id %}">
+                        {{ finca.name }}
+                    </a> - {{ finca.owner }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontraron Fincas.</p>
+    {% endif %}
+</body>
+</html>
